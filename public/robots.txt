@@ -1,0 +1,54 @@
+# Robots.txt for squared.com.au
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://squared.com.au/sitemap.xml
+
+# Disallow admin or private paths if any
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow search engines to index everything else
+Allow: /about
+Allow: /services
+Allow: /case-studies
+Allow: /blog
+Allow: /resources
+Allow: /contact
+Allow: /consultation
+Allow: /square-api-playground
+Allow: /integration-wizard
+Allow: /roi-calculator
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

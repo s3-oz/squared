@@ -1,0 +1,11 @@
+{
+  "deployments": [
+    {
+      "timestamp": "2025-08-02T00:00:00Z",
+      "environment": "production",
+      "url": "https://squared-com-au.vercel.app",
+      "project_name": "squared",
+      "status": "success"
+    }
+  ]
+}

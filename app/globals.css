@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0F172A;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-primary;
+  }
+
+  /* Custom font imports */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/inter-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/inter-medium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/inter-semibold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/inter-bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'JetBrains Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/jetbrains-mono-regular.woff2') format('woff2');
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-secondary-blue text-white font-medium px-6 py-3 rounded transition-colors duration-normal hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-secondary-blue focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary border border-neutral-light font-medium px-6 py-3 rounded transition-colors duration-normal hover:bg-neutral-off focus:outline-none focus:ring-2 focus:ring-neutral-gray focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply text-primary font-medium px-6 py-3 rounded transition-colors duration-normal hover:bg-neutral-off focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-lg p-6 shadow-medium transition-shadow duration-normal hover:shadow-hover;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-2 border border-neutral-light rounded focus:ring-2 focus:ring-secondary-blue focus:border-transparent transition-colors duration-fast;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-neutral-charcoal mb-1;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Code block styling */
+  .code-block {
+    @apply bg-primary text-neutral-off p-4 rounded-lg font-mono text-sm overflow-x-auto;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-primary {
+    @apply bg-gradient-primary;
+  }
+
+  .gradient-subtle {
+    @apply bg-gradient-subtle;
+  }
+}
+
+@layer utilities {
+  /* Custom text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary-blue;
+  }
+
+  /* Custom focus states */
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary-blue focus-visible:ring-offset-2;
+  }
+
+  /* Custom animation classes */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
