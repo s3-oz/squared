@@ -1,203 +1,167 @@
-'use client'
-
-import { AnimatedHero } from '@/components/sections/AnimatedHero'
-import { ServicesGrid } from '@/components/sections/ServicesGrid'
+import { Hero } from '@/components/sections/Hero'
 import { Container } from '@/components/ui/Container'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card'
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { Badge } from '@/components/ui/Badge'
-import { LeadCaptureForm } from '@/components/forms/LeadCaptureForm'
-import { AnimatedSection } from '@/components/ui/AnimatedSection'
-import { AnimatedCard } from '@/components/ui/AnimatedCard'
-import { AnimatedCounter } from '@/components/ui/AnimatedCounter'
-import { motion } from 'framer-motion'
-import { staggerItem } from '@/lib/utils/animations'
 import Link from 'next/link'
-import {
-  ChartBarIcon,
-  BuildingStorefrontIcon,
-  CurrencyDollarIcon,
-  BeakerIcon,
-  SparklesIcon,
-  CalculatorIcon,
-} from '@heroicons/react/24/outline'
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <AnimatedHero
-        headline="Unlock Square's Hidden API Powers"
-        subheadline="Transform your Square account into a custom business platform with Australia's only specialized Square API consultancy"
+      <Hero
+        headline="Professional websites for less than you think."
+        subheadline="Custom-built, Square-powered websites for Australian businesses already running on Square. Keep your POS, inventory, bookings and customers where they are — we give you a site worth showing off."
         primaryCTA={{
-          text: 'Get Free API Audit',
-          href: '/consultation',
+          text: 'Book a 20-min chat',
+          href: '{{OZ_FILL: Calendly link}}',
         }}
         secondaryCTA={{
-          text: 'Try API Playground',
-          href: '/square-api-playground',
+          text: 'See how it works',
+          href: '/services',
         }}
-        showParticles={true}
+        variant="centered"
       />
 
-      {/* Trust Badges */}
-      <AnimatedSection className="py-8 bg-neutral-off">
-        <Container>
-          <div className="flex flex-wrap justify-center gap-8 text-center">
-            <motion.div variants={staggerItem} className="flex items-center space-x-2">
-              <span className="text-h3 font-bold text-primary">
-                <AnimatedCounter to={5} />
-              </span>
-              <span className="text-sm text-neutral-charcoal">Years Square Expertise</span>
-            </motion.div>
-            <motion.div variants={staggerItem} className="flex items-center space-x-2">
-              <span className="text-h3 font-bold text-primary">
-                <AnimatedCounter to={52} />
-              </span>
-              <span className="text-sm text-neutral-charcoal">Successful Integrations</span>
-            </motion.div>
-            <motion.div variants={staggerItem} className="flex items-center space-x-2">
-              <span className="text-h3 font-bold text-primary">
-                <AnimatedCounter to={100} suffix="%" />
-              </span>
-              <span className="text-sm text-neutral-charcoal">Australian Owned</span>
-            </motion.div>
+      {/* Problem */}
+      <section className="section-padding">
+        <Container size="md">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-h2 font-bold text-primary mb-6">
+              You&rsquo;re already on Square. Your website should be too.
+            </h2>
+            <p className="text-body-large text-neutral-charcoal">
+              Your products, inventory, orders, bookings and customer data already live in Square. Your current website either ignores all that (Squarespace, Wix) or makes you duplicate it (Shopify). Either way, you&rsquo;re paying twice and syncing on spreadsheets.
+            </p>
           </div>
         </Container>
-      </AnimatedSection>
+      </section>
 
-      {/* Value Props */}
-      <AnimatedSection className="section-padding" stagger={true}>
+      {/* Pitch — three pillars */}
+      <section className="section-padding bg-neutral-off">
         <Container>
-          <motion.div variants={staggerItem} className="text-center mb-12">
-            <p className="text-body-large text-neutral-charcoal max-w-3xl mx-auto">
-              Most Square users tap into less than 20% of the platform's capability. 
-              We're here to unlock the other 80%—the features Square built but didn't put buttons for.
-            </p>
-          </motion.div>
+          <div className="text-center mb-12">
+            <h2 className="text-h2 font-bold text-primary mb-4">
+              One backend. One bill. One source of truth.
+            </h2>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <AnimatedCard delay={0.1}>
+            <Card>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary-blue/10 flex items-center justify-center mb-4">
-                  <ChartBarIcon className="w-6 h-6 text-secondary-blue" />
-                </div>
-                <CardTitle>Every Endpoint, Every Possibility</CardTitle>
+                <CardTitle>Runs on your Square</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-neutral-charcoal">
-                  We know Square's API inside out—from basic payments to complex OAuth flows. 
-                  No learning curve on your dime, just immediate expertise applied to your specific needs.
+                  Reads your real menu, catalog, bookings, customers. Update it once, in Square, like you already do.
                 </p>
               </CardContent>
-            </AnimatedCard>
+            </Card>
 
-            <AnimatedCard delay={0.2}>
+            <Card>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary-blue/10 flex items-center justify-center mb-4">
-                  <BuildingStorefrontIcon className="w-6 h-6 text-secondary-blue" />
-                </div>
-                <CardTitle>Built for Australian Business</CardTitle>
+                <CardTitle>Actually custom</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-neutral-charcoal">
-                  GST calculations, EFTPOS integration, ABN validation—all the local requirements baked in. 
-                  No awkward workarounds or 'it works in the US' solutions.
+                  Not a template locked behind a theme editor. Real design, built for your business, by a human.
                 </p>
               </CardContent>
-            </AnimatedCard>
+            </Card>
 
-            <AnimatedCard delay={0.3}>
+            <Card>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary-blue/10 flex items-center justify-center mb-4">
-                  <CurrencyDollarIcon className="w-6 h-6 text-secondary-blue" />
-                </div>
-                <CardTitle>ROI You Can Bank On</CardTitle>
+                <CardTitle>Priced like it&rsquo;s 2026</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-neutral-charcoal">
-                  Our clients average 6-week payback. From saving 20 hours weekly to preventing $15k 
-                  in monthly losses—we deliver measurable results, not vague promises.
+                  No app marketplace, no platform tax, no surprise invoices. {'{{OZ_FILL: price stance — "one flat monthly fee" vs "from $X" vs "chat for quote"}}'}
                 </p>
               </CardContent>
-            </AnimatedCard>
+            </Card>
           </div>
         </Container>
-      </AnimatedSection>
+      </section>
 
-      {/* Services Preview */}
-      <AnimatedSection>
-        <ServicesGrid 
-          title="From Quick Wins to Complete Transformations"
-          description="Whether you need a specific problem solved or your entire Square experience reimagined, we match our approach to your needs."
-        />
-      </AnimatedSection>
-
-      {/* Tools Preview */}
-      <AnimatedSection className="section-padding bg-gradient-subtle" stagger={true}>
+      {/* What we build */}
+      <section className="section-padding">
         <Container>
-          <motion.div variants={staggerItem} className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-primary mb-4">See the API Magic Yourself</h2>
-            <p className="text-body-large text-neutral-charcoal max-w-2xl mx-auto">
-              Don't just take our word for it. Explore Square's capabilities hands-on.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <AnimatedCard delay={0.1} className="hover:shadow-hover transition-shadow">
+          <div className="text-center mb-12">
+            <h2 className="text-h2 font-bold text-primary mb-4">What we build</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary-blue/10 flex items-center justify-center mb-4">
-                  <BeakerIcon className="w-6 h-6 text-secondary-blue" />
-                </div>
-                <CardTitle>API Playground</CardTitle>
-                <CardDescription>Test real Square endpoints safely</CardDescription>
+                <CardTitle>Catalog + storefront</CardTitle>
               </CardHeader>
               <CardContent>
-                <Button asChild className="w-full">
-                  <Link href="/square-api-playground">Start Exploring</Link>
-                </Button>
+                <p className="text-neutral-charcoal">
+                  Square products rendered on a site that doesn&rsquo;t look like everyone else&rsquo;s.
+                </p>
               </CardContent>
-            </AnimatedCard>
-
-            <AnimatedCard delay={0.2} className="hover:shadow-hover transition-shadow">
+            </Card>
+            <Card>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary-blue/10 flex items-center justify-center mb-4">
-                  <SparklesIcon className="w-6 h-6 text-secondary-blue" />
-                </div>
-                <CardTitle>Integration Wizard</CardTitle>
-                <CardDescription>Get personalized recommendations</CardDescription>
+                <CardTitle>Bookings + scheduling</CardTitle>
               </CardHeader>
               <CardContent>
-                <Button asChild className="w-full">
-                  <Link href="/integration-wizard">Find Your Solution</Link>
-                </Button>
+                <p className="text-neutral-charcoal">
+                  Square Appointments powering a booking flow you&rsquo;d actually be proud of.
+                </p>
               </CardContent>
-            </AnimatedCard>
-
-            <AnimatedCard delay={0.3} className="hover:shadow-hover transition-shadow">
+            </Card>
+            <Card>
               <CardHeader>
-                <div className="w-12 h-12 bg-secondary-blue/10 flex items-center justify-center mb-4">
-                  <CalculatorIcon className="w-6 h-6 text-secondary-blue" />
-                </div>
-                <CardTitle>ROI Calculator</CardTitle>
-                <CardDescription>Calculate your integration value</CardDescription>
+                <CardTitle>Online ordering</CardTitle>
               </CardHeader>
               <CardContent>
-                <Button asChild className="w-full">
-                  <Link href="/roi-calculator">Calculate ROI</Link>
-                </Button>
+                <p className="text-neutral-charcoal">
+                  Menu, cart, Square checkout, on your domain, no 15% Menulog tax.
+                </p>
               </CardContent>
-            </AnimatedCard>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Custom tools</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-neutral-charcoal">
+                  Loyalty dashboards, inventory reports, vertical-specific features — ask.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </Container>
-      </AnimatedSection>
+      </section>
 
-      {/* Lead Capture Section */}
-      <AnimatedSection className="section-padding">
-        <Container size="sm">
-          <LeadCaptureForm variant="homepage" />
+      {/* Proof */}
+      <section className="section-padding bg-neutral-off">
+        <Container size="md">
+          <div className="text-center">
+            <h2 className="text-h2 font-bold text-primary mb-6">
+              A site we built for ourselves first.
+            </h2>
+            <Button asChild size="lg">
+              <Link href="/case-studies/simstudio">See SimStudio</Link>
+            </Button>
+          </div>
         </Container>
-      </AnimatedSection>
+      </section>
+
+      {/* Closing CTA */}
+      <section className="section-padding">
+        <Container size="md">
+          <div className="text-center">
+            <h2 className="text-h2 font-bold text-primary mb-4">
+              Stop paying for two systems that don&rsquo;t talk to each other.
+            </h2>
+            <p className="text-body-large text-neutral-charcoal mb-8 max-w-2xl mx-auto">
+              Book a 20-min chat. We&rsquo;ll look at your Square, sketch what&rsquo;s possible, quote fairly. No deck, no sales script.
+            </p>
+            <Button asChild size="lg">
+              <Link href="{{OZ_FILL: Calendly link}}">Book a 20-min chat</Link>
+            </Button>
+          </div>
+        </Container>
+      </section>
     </>
   )
 }
