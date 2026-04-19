@@ -2,8 +2,8 @@
   "path": "/",
   "content": {
     "hero": {
-      "headline": "Your Square. On your own website.",
-      "subheadline": "Professional websites for less than you think. Built on the Square you already use — catalog, bookings, orders, customers — extended to the web the way you want it.",
+      "headline": "Your Square can do more than you think.",
+      "subheadline": "You already use it for payments, catalog, inventory, customers and bookings. We build the custom website, online store, or booking flow on top of it — killing the Shopify, Squarespace or Mindbody bill in the process.",
       "cta_primary": {
         "text": "Book a 20-min chat",
         "href": "{{OZ_FILL: Calendly link}}"

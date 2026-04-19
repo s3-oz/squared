@@ -8,39 +8,102 @@ export default function Home() {
   return (
     <>
       <Hero
-        headline="Your Square. On your own website."
-        subheadline="Professional websites for less than you think. Built on the Square you already use — catalog, bookings, orders, customers — extended to the web the way you want it."
+        headline="Your Square can do more than you think."
+        subheadline="You already use it for payments, catalog, inventory, customers and bookings. We build the custom website, online store, or booking flow on top of it — killing the Shopify, Squarespace or Mindbody bill in the process."
         primaryCTA={{
           text: 'Book a 20-min chat',
           href: '{{OZ_FILL: Calendly link}}',
         }}
         secondaryCTA={{
-          text: 'See how it works',
+          text: 'See what we unlock',
           href: '/services',
         }}
         variant="centered"
       />
 
-      {/* Problem */}
+      {/* The situation */}
       <section className="section-padding">
         <Container size="md">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-h2 font-bold text-primary mb-6">
-              You&rsquo;re already on Square. Your website should be too.
+              You already know Square.
             </h2>
+            <p className="text-body-large text-neutral-charcoal mb-4">
+              You ring up sales through it. Your menu or product catalog lives in it. Maybe you take bookings with Square Appointments, or track stock with Square Inventory, or tap cards with the Square reader.
+            </p>
             <p className="text-body-large text-neutral-charcoal">
-              Your products, inventory, orders, bookings and customer data already live in Square. Your current website either ignores all that (Squarespace, Wix) or makes you duplicate it (Shopify). Either way, you&rsquo;re paying twice and syncing on spreadsheets.
+              That&rsquo;s already a full business system — running quietly in the background. Most people never use half of it.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Pitch — three pillars */}
+      {/* The revelation */}
       <section className="section-padding bg-neutral-off">
+        <Container>
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <h2 className="text-h2 font-bold text-primary mb-4">
+              You probably don&rsquo;t know it can also do this.
+            </h2>
+            <p className="text-body-large text-neutral-charcoal">
+              Square has an API. Which means with a custom-built website on top, your Square data can power anything — and you can ditch the extra subscriptions you&rsquo;re paying for right now.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card>
+              <CardHeader>
+                <CardTitle>A real online store</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-neutral-charcoal">
+                  Your Square catalog on a website that actually looks like your brand — not a Square Online template. <strong>Kills your Shopify bill.</strong>
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Online ordering on your domain</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-neutral-charcoal">
+                  Menu, cart, Square checkout, on yourbusiness.com.au. <strong>Kills the 15% Menulog/UberEats cut.</strong>
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>A booking flow you&rsquo;re proud of</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-neutral-charcoal">
+                  Square Appointments, with a custom booking UX and your branding. <strong>Kills your Mindbody/Acuity subscription.</strong>
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Customer-facing dashboards</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-neutral-charcoal">
+                  Loyalty, class packs, stock levels, membership — drawn live from Square. <strong>Kills whatever third-party app is syncing to it today.</strong>
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </Container>
+      </section>
+
+      {/* Why us */}
+      <section className="section-padding">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-h2 font-bold text-primary mb-4">
-              One backend. One bill. One source of truth.
+              One backend. One bill. One human to talk to.
             </h2>
           </div>
 
@@ -51,7 +114,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-neutral-charcoal">
-                  Reads your real menu, catalog, bookings, customers. Update it once, in Square, like you already do.
+                  Your data stays where it is. Update Square, the website updates. No second system to maintain.
                 </p>
               </CardContent>
             </Card>
@@ -81,57 +144,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* What we build */}
-      <section className="section-padding">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-primary mb-4">What we build</h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card>
-              <CardHeader>
-                <CardTitle>Catalog + storefront</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-neutral-charcoal">
-                  Square products rendered on a site that doesn&rsquo;t look like everyone else&rsquo;s.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Bookings + scheduling</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-neutral-charcoal">
-                  Square Appointments powering a booking flow you&rsquo;d actually be proud of.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Online ordering</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-neutral-charcoal">
-                  Menu, cart, Square checkout, on your domain, no 15% Menulog tax.
-                </p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Custom tools</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-neutral-charcoal">
-                  Loyalty dashboards, inventory reports, vertical-specific features — ask.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </Container>
-      </section>
-
       {/* Proof */}
       <section className="section-padding bg-neutral-off">
         <Container size="md">
@@ -151,10 +163,10 @@ export default function Home() {
         <Container size="md">
           <div className="text-center">
             <h2 className="text-h2 font-bold text-primary mb-4">
-              Stop paying for two systems that don&rsquo;t talk to each other.
+              Show us your Square. We&rsquo;ll tell you what it can do.
             </h2>
             <p className="text-body-large text-neutral-charcoal mb-8 max-w-2xl mx-auto">
-              Book a 20-min chat. We&rsquo;ll look at your Square, sketch what&rsquo;s possible, quote fairly. No deck, no sales script.
+              Book a 20-min chat. We&rsquo;ll look at your current Square setup, point out what you&rsquo;re paying for that you don&rsquo;t need, and sketch what a custom site on top of it would look like. No deck, no sales script.
             </p>
             <Button asChild size="lg">
               <Link href="{{OZ_FILL: Calendly link}}">Book a 20-min chat</Link>

@@ -6,8 +6,8 @@
 
 **Hero**
 
-- H1: Your Square. On your own website.
-- Sub: Professional websites for less than you think. Built on the Square you already use — catalog, bookings, orders, customers — extended to the web the way you want it.
+- H1: Your Square can do more than you think.
+- Sub: You already use it for payments, catalog, inventory, customers and bookings. We build the custom website, online store, or booking flow on top of it — killing the Shopify, Squarespace or Mindbody bill in the process.
 - CTA primary: Book a 20-min chat → {{OZ_FILL: Calendly link}}
 - CTA secondary: See how it works → /services
 
