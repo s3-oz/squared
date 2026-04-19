@@ -1,0 +1,14 @@
+{
+  "path": "/contact",
+  "content": {
+    "hero": {
+      "headline": "Let's have a quick chat."
+    },
+    "body": "20 minutes on a call. You show us your Square. We tell you honestly whether what you want is realistic, how long it'd take, and what it'd cost. No deck, no sales pipeline chase.",
+    "cta": {
+      "text": "Book a slot",
+      "href": "{{OZ_FILL: Calendly link}}"
+    },
+    "email": "{{OZ_FILL: email address}}"
+  }
+}

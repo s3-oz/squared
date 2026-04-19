@@ -1,0 +1,321 @@
+# Page
+
+**Path**: /privacy
+
+**Generated At**: 2025-07-25T10:55:00Z
+
+## Content
+```json
+{
+  "hero": {
+    "headline": "Privacy Policy",
+    "subheadline": "Your data, protected with the same care we apply to API integrations",
+    "last_updated": "November 15, 2024",
+    "version": "2.0"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Our Commitment to Your Privacy",
+      "content": {
+        "text": "At Squared² Pty Ltd (ABN 12 345 678 901), we handle sensitive business data daily through our Square API integrations. We understand the trust you place in us and take privacy seriously—not just because Australian law requires it, but because your business depends on it.",
+        "key_points": [
+          "We comply with the Australian Privacy Act 1988 and Privacy Principles",
+          "We never sell, share, or monetize your data",
+          "We use bank-level security for all data handling",
+          "You maintain full control over your information"
+        ]
+      }
+    },
+    {
+      "id": "information-we-collect",
+      "title": "Information We Collect",
+      "subsections": [
+        {
+          "subtitle": "Business Information",
+          "items": [
+            "Company name, ABN, and contact details",
+            "Square Merchant ID (for integration purposes)",
+            "Business type and industry",
+            "Integration requirements and specifications"
+          ]
+        },
+        {
+          "subtitle": "Contact Information",
+          "items": [
+            "Names of authorized representatives",
+            "Email addresses and phone numbers",
+            "Billing and postal addresses",
+            "Preferred communication methods"
+          ]
+        },
+        {
+          "subtitle": "Technical Information",
+          "items": [
+            "Square API credentials (stored securely, never in plain text)",
+            "Integration configurations and settings",
+            "API usage patterns (for optimization)",
+            "Error logs and debugging information"
+          ]
+        },
+        {
+          "subtitle": "Website Analytics",
+          "items": [
+            "Pages visited and resources downloaded",
+            "IP addresses (anonymized after 30 days)",
+            "Device and browser information",
+            "Referral sources"
+          ],
+          "note": "We use privacy-focused analytics that don't track individuals"
+        }
+      ]
+    },
+    {
+      "id": "how-we-use-information",
+      "title": "How We Use Your Information",
+      "content": {
+        "primary_uses": [
+          {
+            "purpose": "Service Delivery",
+            "description": "To build, test, and maintain your Square API integrations"
+          },
+          {
+            "purpose": "Communication",
+            "description": "To update you about your project, respond to inquiries, and provide support"
+          },
+          {
+            "purpose": "Improvement",
+            "description": "To enhance our services and develop better integration solutions"
+          },
+          {
+            "purpose": "Compliance",
+            "description": "To meet legal obligations and maintain proper business records"
+          }
+        ],
+        "we_never": [
+          "Sell your information to third parties",
+          "Use your data for unrelated marketing",
+          "Share your competitive information",
+          "Access your Square data beyond integration needs"
+        ]
+      }
+    },
+    {
+      "id": "data-security",
+      "title": "How We Protect Your Data",
+      "content": {
+        "measures": [
+          {
+            "title": "Encryption",
+            "description": "All data transmitted and stored uses industry-standard encryption (TLS 1.3+, AES-256)"
+          },
+          {
+            "title": "Access Control",
+            "description": "Strict role-based access limited to authorized team members only"
+          },
+          {
+            "title": "Secure Infrastructure",
+            "description": "Australian-hosted servers with 24/7 monitoring and regular security audits"
+          },
+          {
+            "title": "API Credentials",
+            "description": "OAuth tokens stored in encrypted vaults, never in code or plain text"
+          },
+          {
+            "title": "Regular Audits",
+            "description": "Quarterly security reviews and annual third-party penetration testing"
+          }
+        ],
+        "incident_response": "In the unlikely event of a data breach, we'll notify affected parties within 72 hours as required by Australian law."
+      }
+    },
+    {
+      "id": "third-party-services",
+      "title": "Third-Party Services",
+      "content": {
+        "intro": "We use select third-party services to deliver our solutions. Each is chosen for their privacy practices and security standards:",
+        "services": [
+          {
+            "service": "Square Inc.",
+            "purpose": "API platform and payment processing",
+            "data_shared": "API credentials, transaction data (as authorized)",
+            "privacy_link": "squareup.com/au/privacy"
+          },
+          {
+            "service": "Amazon Web Services (Sydney)",
+            "purpose": "Secure cloud hosting",
+            "data_shared": "Encrypted application data",
+            "privacy_link": "aws.amazon.com/privacy"
+          },
+          {
+            "service": "Stripe",
+            "purpose": "Invoice payment processing",
+            "data_shared": "Payment information (we never see card details)",
+            "privacy_link": "stripe.com/privacy"
+          },
+          {
+            "service": "Xero",
+            "purpose": "Accounting and invoicing",
+            "data_shared": "Invoice details, company information",
+            "privacy_link": "xero.com/au/privacy"
+          }
+        ],
+        "note": "We only share the minimum information necessary for each service to function."
+      }
+    },
+    {
+      "id": "your-rights",
+      "title": "Your Rights",
+      "content": {
+        "intro": "Under Australian Privacy Law, you have the right to:",
+        "rights": [
+          {
+            "right": "Access",
+            "description": "Request a copy of all information we hold about you"
+          },
+          {
+            "right": "Correction",
+            "description": "Update or correct any inaccurate information"
+          },
+          {
+            "right": "Deletion",
+            "description": "Request removal of your data (subject to legal requirements)"
+          },
+          {
+            "right": "Portability",
+            "description": "Receive your data in a structured, machine-readable format"
+          },
+          {
+            "right": "Objection",
+            "description": "Opt out of marketing communications at any time"
+          }
+        ],
+        "how_to_exercise": "To exercise any of these rights, email privacy@squared.com.au or call 1300 SQUARED. We'll respond within 30 days."
+      }
+    },
+    {
+      "id": "data-retention",
+      "title": "Data Retention",
+      "content": {
+        "policy": "We keep your information only as long as necessary to provide services and meet legal obligations:",
+        "retention_periods": [
+          {
+            "data_type": "Active project data",
+            "period": "Duration of project plus 90 days"
+          },
+          {
+            "data_type": "Support records",
+            "period": "2 years from last interaction"
+          },
+          {
+            "data_type": "Financial records",
+            "period": "7 years (ATO requirement)"
+          },
+          {
+            "data_type": "API credentials",
+            "period": "Deleted immediately upon project completion"
+          },
+          {
+            "data_type": "Marketing preferences",
+            "period": "Until you unsubscribe"
+          }
+        ],
+        "deletion": "When retention periods expire, data is securely destroyed using industry-standard methods."
+      }
+    },
+    {
+      "id": "cookies",
+      "title": "Cookies and Tracking",
+      "content": {
+        "intro": "We use minimal cookies to improve your experience:",
+        "cookie_types": [
+          {
+            "type": "Essential",
+            "purpose": "Required for website functionality",
+            "examples": "Session management, security tokens",
+            "duration": "Session only"
+          },
+          {
+            "type": "Analytics",
+            "purpose": "Understanding site usage (anonymized)",
+            "examples": "Page views, resource downloads",
+            "duration": "90 days"
+          },
+          {
+            "type": "Preferences",
+            "purpose": "Remembering your choices",
+            "examples": "Cookie consent, display preferences",
+            "duration": "1 year"
+          }
+        ],
+        "control": "You can control cookies through your browser settings. Disabling essential cookies may impact site functionality.",
+        "no_tracking": "We don't use tracking pixels, fingerprinting, or invasive analytics."
+      }
+    },
+    {
+      "id": "childrens-privacy",
+      "title": "Children's Privacy",
+      "content": {
+        "text": "Our services are designed for businesses. We don't knowingly collect information from anyone under 18. If we learn we've collected such information, we'll delete it immediately."
+      }
+    },
+    {
+      "id": "international-transfers",
+      "title": "International Data Transfers",
+      "content": {
+        "policy": "We store and process all data in Australia whenever possible. When international transfer is necessary (e.g., Square's US-based API), we ensure:",
+        "safeguards": [
+          "Appropriate contractual clauses are in place",
+          "Recipient countries have adequate privacy laws",
+          "Data is encrypted during transfer",
+          "Minimum necessary data is transferred"
+        ]
+      }
+    },
+    {
+      "id": "updates",
+      "title": "Updates to This Policy",
+      "content": {
+        "text": "We may update this policy to reflect changes in law or our practices. We'll notify you of material changes via email and post updates here with the revision date.",
+        "commitment": "Changes will never reduce your privacy rights without your explicit consent."
+      }
+    },
+    {
+      "id": "contact",
+      "title": "Contact Us",
+      "content": {
+        "intro": "Questions about privacy? We're here to help:",
+        "contact_details": {
+          "privacy_officer": "Sarah Mitchell, Privacy Officer",
+          "email": "privacy@squared.com.au",
+          "phone": "1300 SQUARED (1300 778 2733)",
+          "address": "Level 10, 123 Business Street, Melbourne VIC 3000",
+          "response_time": "We aim to respond within 2 business days"
+        },
+        "complaints": {
+          "text": "If you're not satisfied with our privacy handling, you can lodge a complaint with:",
+          "authority": "Office of the Australian Information Commissioner (OAIC)",
+          "website": "oaic.gov.au",
+          "phone": "1300 363 992"
+        }
+      }
+    }
+  ],
+  "footer": {
+    "certification": "This privacy policy complies with the Australian Privacy Act 1988 and the Australian Privacy Principles (APPs).",
+    "transparency": "We believe in earning trust through transparency. If you have any questions about how we handle data, just ask."
+  }
+}
+```
+
+## Metadata
+```json
+{
+  "word_count": 1200,
+  "reading_time": "6 min",
+  "legal_review": "November 2024",
+  "next_review": "May 2025",
+  "compliance": "Australian Privacy Act 1988"
+}
+```
+
