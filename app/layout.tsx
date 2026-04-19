@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Squared — Professional websites for less than you think',
+  title: 'Squared² — The power of Square, squared',
   description: 'Custom Square-powered websites for Australian businesses already running on Square. Built by a human, with serious AI leverage.',
   keywords: 'Square website, Square integration, Australian small business, custom website, Square Appointments',
   authors: [{ name: 'Squared' }],
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://squared.com.au',
     siteName: 'Squared',
-    title: 'Squared — Professional websites for less than you think',
+    title: 'Squared² — The power of Square, squared',
     description: 'Custom Square-powered websites for Australian businesses already running on Square.',
     images: [
       {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squared — Professional websites for less than you think',
+    title: 'Squared² — The power of Square, squared',
     description: 'Custom Square-powered websites for Australian businesses already running on Square.',
     images: ['https://squared.com.au/twitter-image.png'],
   },

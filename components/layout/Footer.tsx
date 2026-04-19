@@ -30,12 +30,15 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Brand section */}
             <div>
-              <Link href="/" className="flex items-center space-x-2 mb-4">
+              <Link href="/" className="flex items-center space-x-2 mb-2">
                 <div className="w-10 h-10 bg-white flex items-center justify-center">
                   <span className="text-primary font-bold text-xl">S²</span>
                 </div>
-                <span className="text-white font-semibold text-xl">Squared</span>
+                <span className="text-white font-semibold text-xl">Squared<sup className="text-sm">²</sup></span>
               </Link>
+              <p className="text-sm text-white/90 font-medium mb-3">
+                The power of Square, squared.
+              </p>
               <p className="text-sm text-neutral-light leading-relaxed">
                 Custom Square-powered websites for Australian businesses.
               </p>

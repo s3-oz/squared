@@ -26,11 +26,14 @@ export function Navigation() {
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2" title="The power of Square, squared.">
             <div className="w-10 h-10 border-2 border-primary flex items-center justify-center">
               <span className="text-primary font-bold text-xl">S²</span>
             </div>
-            <span className="text-primary font-semibold text-xl">Squared</span>
+            <div className="flex flex-col leading-tight">
+              <span className="text-primary font-semibold text-xl">Squared<sup className="text-sm">²</sup></span>
+              <span className="hidden sm:block text-xs text-neutral-charcoal">The power of Square, squared.</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
