@@ -6,8 +6,8 @@
 
 **Hero**
 
-- H1: Professional websites for less than you think.
-- Sub: Custom-built, Square-powered websites for Australian businesses already running on Square. Keep your POS, inventory, bookings and customers where they are — we give you a site worth showing off.
+- H1: Your Square. On your own website.
+- Sub: Professional websites for less than you think. Built on the Square you already use — catalog, bookings, orders, customers — extended to the web the way you want it.
 - CTA primary: Book a 20-min chat → {{OZ_FILL: Calendly link}}
 - CTA secondary: See how it works → /services
 

@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Hero
-        headline="Professional websites for less than you think."
-        subheadline="Custom-built, Square-powered websites for Australian businesses already running on Square. Keep your POS, inventory, bookings and customers where they are — we give you a site worth showing off."
+        headline="Your Square. On your own website."
+        subheadline="Professional websites for less than you think. Built on the Square you already use — catalog, bookings, orders, customers — extended to the web the way you want it."
         primaryCTA={{
           text: 'Book a 20-min chat',
           href: '{{OZ_FILL: Calendly link}}',
