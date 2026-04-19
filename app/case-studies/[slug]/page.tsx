@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
-import { Container, Card } from '@/components/ui'
-import { getPageContent, getContentByType } from '@/lib/content/loader'
+import { Container } from '@/components/ui/Container'
+import { Card, CardContent } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -10,206 +11,106 @@ interface CaseStudyPageProps {
   }
 }
 
-export async function generateStaticParams() {
-  // For now, return a static list. In production, this would come from CMS/API
-  return [
-    { slug: 'retail-transformation' },
-    { slug: 'hospitality-integration' },
-    { slug: 'marketplace-platform' },
-  ]
+type CaseStudy = {
+  title: string
+  sub: string
+  story: string
+  features: string[]
+  lessons: string
 }
 
-export async function generateMetadata({ params }: CaseStudyPageProps): Promise<Metadata> {
-  // In production, fetch metadata from CMS/API
-  const titles: Record<string, string> = {
-    'retail-transformation': 'Retail Chain Square API Transformation',
-    'hospitality-integration': 'Restaurant Group Custom Integration',
-    'marketplace-platform': 'Building a Marketplace on Square APIs',
+const caseStudies: Record<string, CaseStudy> = {
+  simstudio: {
+    title: 'SimStudio — a gym booking system that runs on Square.',
+    sub: 'Built for ourselves first. Now available as a starting point for any movement/fitness/class-based business.',
+    story:
+      '{{OZ_FILL: 3–5 sentences on origin — why SimStudio, who it\'s for, what problem it solves. Keep it honest.}}',
+    features: [
+      'Live class schedule pulled from Square Appointments',
+      'Booking flow with Square-held customer records',
+      'Class capacity + waitlist',
+      'Instructor pages',
+      '{{OZ_FILL: other specific features that matter}}',
+    ],
+    lessons:
+      '{{OZ_FILL: 2–3 honest lessons — what was hard, what surprised us, what we\'d do differently}}',
+  },
+}
+
+export function generateStaticParams() {
+  return Object.keys(caseStudies).map((slug) => ({ slug }))
+}
+
+export function generateMetadata({ params }: CaseStudyPageProps): Metadata {
+  const study = caseStudies[params.slug]
+  if (!study) {
+    return { title: 'Case Study | Squared' }
   }
-  
   return {
-    title: `${titles[params.slug] || 'Case Study'} | Squared`,
-    description: 'See how businesses transform with Square API implementations.',
+    title: `${study.title} | Squared`,
+    description: study.sub,
   }
 }
 
-export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
-  // In production, fetch case study data from CMS/API
-  const caseStudyData = {
-    'retail-transformation': {
-      title: 'Retail Chain Square API Transformation',
-      client: 'Major Retail Chain',
-      industry: 'Retail',
-      challenge: 'Fragmented payment systems across 50+ locations',
-      solution: 'Unified Square API integration with custom inventory sync',
-      results: [
-        '40% reduction in payment processing time',
-        '25% increase in transaction success rate',
-        'Real-time inventory updates across all locations',
-        '$2M annual savings in operational costs'
-      ],
-      testimonial: {
-        quote: 'The Square API integration transformed our operations. We now have real-time visibility across all locations and our checkout process is faster than ever.',
-        author: 'Sarah Chen',
-        role: 'CTO, Major Retail Chain'
-      }
-    },
-    'hospitality-integration': {
-      title: 'Restaurant Group Custom Integration',
-      client: 'TasteBud Restaurant Group',
-      industry: 'Hospitality',
-      challenge: 'Complex order management across dine-in, takeout, and delivery',
-      solution: 'Custom Square API integration with POS and delivery platforms',
-      results: [
-        '60% faster order processing',
-        'Unified reporting across all channels',
-        '30% reduction in order errors',
-        'Seamless integration with 5 delivery platforms'
-      ],
-      testimonial: {
-        quote: 'Square APIs allowed us to create a seamless experience for our customers regardless of how they order from us.',
-        author: 'Michael Rodriguez',
-        role: 'Operations Director, TasteBud'
-      }
-    },
-    'marketplace-platform': {
-      title: 'Building a Marketplace on Square APIs',
-      client: 'ArtisanHub Marketplace',
-      industry: 'E-commerce',
-      challenge: 'Enable hundreds of sellers to accept payments seamlessly',
-      solution: 'Square OAuth and split payment implementation',
-      results: [
-        '500+ sellers onboarded in 3 months',
-        'Automated split payments and fee distribution',
-        '99.9% payment uptime',
-        '$10M in transaction volume first year'
-      ],
-      testimonial: {
-        quote: 'Square\'s APIs made it possible for us to build a marketplace that handles complex payment flows with ease.',
-        author: 'Emma Thompson',
-        role: 'Founder, ArtisanHub'
-      }
-    }
-  }
+export default function CaseStudyPage({ params }: CaseStudyPageProps) {
+  const data = caseStudies[params.slug]
 
-  const data = caseStudyData[params.slug as keyof typeof caseStudyData]
-  
   if (!data) {
     notFound()
   }
 
   return (
     <main>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800 py-16 md:py-24">
-        <Container>
-          <div className="max-w-4xl">
-            <Link 
-              href="/case-studies"
-              className="text-purple-600 hover:underline mb-4 inline-block"
-            >
-              ← Back to Case Studies
-            </Link>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              {data.title}
-            </h1>
-            <div className="flex flex-wrap gap-4">
-              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">
-                {data.client}
-              </span>
-              <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full text-sm">
-                {data.industry}
-              </span>
-            </div>
-          </div>
+      <section className="section-padding">
+        <Container size="md">
+          <Link
+            href="/case-studies"
+            className="text-secondary-blue hover:underline mb-6 inline-block"
+          >
+            ← Back to case studies
+          </Link>
+          <h1 className="text-h1 font-bold text-primary mb-4">{data.title}</h1>
+          <p className="text-body-large text-neutral-charcoal">{data.sub}</p>
         </Container>
       </section>
 
-      {/* Challenge Section */}
-      <section className="py-16">
-        <Container>
-          <div className="max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              {data.challenge}
-            </p>
-          </div>
+      <section className="section-padding bg-neutral-off">
+        <Container size="md">
+          <h2 className="text-h2 font-bold text-primary mb-4">The story</h2>
+          <p className="text-body text-neutral-charcoal">{data.story}</p>
         </Container>
       </section>
 
-      {/* Solution Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <Container>
-          <div className="max-w-4xl">
-            <h2 className="text-3xl font-bold mb-6">The Solution</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              {data.solution}
-            </p>
-          </div>
+      <section className="section-padding">
+        <Container size="md">
+          <h2 className="text-h2 font-bold text-primary mb-6">What it does</h2>
+          <ul className="list-disc pl-6 space-y-2 text-body text-neutral-charcoal">
+            {data.features.map((feature, i) => (
+              <li key={i}>{feature}</li>
+            ))}
+          </ul>
         </Container>
       </section>
 
-      {/* Results Section */}
-      <section className="py-16">
-        <Container>
-          <div className="max-w-4xl">
-            <h2 className="text-3xl font-bold mb-8">The Results</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {data.results.map((result, index) => (
-                <Card key={index} className="p-6">
-                  <div className="flex items-start">
-                    <svg
-                      className="h-6 w-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <p className="text-gray-600 dark:text-gray-300">{result}</p>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
+      <section className="section-padding bg-neutral-off">
+        <Container size="md">
+          <h2 className="text-h2 font-bold text-primary mb-4">What we learned</h2>
+          <p className="text-body text-neutral-charcoal">{data.lessons}</p>
         </Container>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="py-16 bg-purple-600 text-white">
-        <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <blockquote className="text-2xl md:text-3xl font-medium mb-6">
-              "{data.testimonial.quote}"
-            </blockquote>
-            <div>
-              <p className="font-semibold">{data.testimonial.author}</p>
-              <p className="opacity-90">{data.testimonial.role}</p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16">
-        <Container>
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Let's discuss how Square APIs can revolutionize your operations.
-            </p>
-            <Link
-              href="/consultation"
-              className="inline-block px-8 py-3 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors"
-            >
-              Schedule a Consultation
-            </Link>
-          </div>
+      <section className="section-padding">
+        <Container size="md">
+          <Card>
+            <CardContent className="py-12 text-center">
+              <h2 className="text-h2 font-bold text-primary mb-4">
+                Interested in something similar?
+              </h2>
+              <Button asChild size="lg">
+                <Link href="{{OZ_FILL: Calendly link}}">Book a 20-min chat</Link>
+              </Button>
+            </CardContent>
+          </Card>
         </Container>
       </section>
     </main>

@@ -1,0 +1,70 @@
+{
+  "path": "/",
+  "content": {
+    "hero": {
+      "headline": "Professional websites for less than you think.",
+      "subheadline": "Custom-built, Square-powered websites for Australian businesses already running on Square. Keep your POS, inventory, bookings and customers where they are — we give you a site worth showing off.",
+      "cta_primary": {
+        "text": "Book a 20-min chat",
+        "href": "{{OZ_FILL: Calendly link}}"
+      },
+      "cta_secondary": {
+        "text": "See how it works",
+        "href": "/services"
+      }
+    },
+    "sections": {
+      "problem": {
+        "headline": "You're already on Square. Your website should be too.",
+        "body": "Your products, inventory, orders, bookings and customer data already live in Square. Your current website either ignores all that (Squarespace, Wix) or makes you duplicate it (Shopify). Either way, you're paying twice and syncing on spreadsheets."
+      },
+      "pitch": {
+        "headline": "One backend. One bill. One source of truth.",
+        "pillars": [
+          {
+            "title": "Runs on your Square",
+            "description": "Reads your real menu, catalog, bookings, customers. Update it once, in Square, like you already do."
+          },
+          {
+            "title": "Actually custom",
+            "description": "Not a template locked behind a theme editor. Real design, built for your business, by a human."
+          },
+          {
+            "title": "Priced like it's 2026",
+            "description": "No app marketplace, no platform tax, no surprise invoices. {{OZ_FILL: price stance — \"one flat monthly fee\" vs \"from $X\" vs \"chat for quote\"}}"
+          }
+        ]
+      },
+      "what_we_build": [
+        {
+          "title": "Catalog + storefront",
+          "description": "Square products rendered on a site that doesn't look like everyone else's."
+        },
+        {
+          "title": "Bookings + scheduling",
+          "description": "Square Appointments powering a booking flow you'd actually be proud of."
+        },
+        {
+          "title": "Online ordering",
+          "description": "Menu, cart, Square checkout, on your domain, no 15% Menulog tax."
+        },
+        {
+          "title": "Custom tools",
+          "description": "Loyalty dashboards, inventory reports, vertical-specific features — ask."
+        }
+      ],
+      "proof": {
+        "headline": "A site we built for ourselves first.",
+        "link": "/case-studies/simstudio"
+      },
+      "cta": {
+        "headline": "Stop paying for two systems that don't talk to each other.",
+        "body": "Book a 20-min chat. We'll look at your Square, sketch what's possible, quote fairly. No deck, no sales script.",
+        "cta": {
+          "text": "Book a 20-min chat",
+          "href": "{{OZ_FILL: Calendly link}}"
+        }
+      }
+    }
+  }
+}

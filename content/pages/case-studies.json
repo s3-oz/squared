@@ -1,0 +1,17 @@
+{
+  "path": "/case-studies",
+  "content": {
+    "hero": {
+      "headline": "Real sites, real Square, real businesses.",
+      "subheadline": "{{OZ_FILL: 1-sentence intro when we have more than one case study — for now just link the SimStudio card}}"
+    },
+    "studies": [
+      {
+        "slug": "simstudio",
+        "title": "SimStudio — a gym booking system that runs on Square",
+        "summary": "Built for ourselves first. Class schedule, bookings, capacity, waitlist — all driven by Square Appointments.",
+        "href": "/case-studies/simstudio"
+      }
+    ]
+  }
+}

@@ -13,8 +13,9 @@ yarn-error.log*
 # Local env files
 .env*.local
 
-# Generated content (source in 05-content-generator)
-/content
+# (Previously: /content was ignored as generated output.
+#  Post-pivot the content/pages/*.md + .json files are hand-written
+#  source-of-truth copy paired with app/* pages and are tracked in git.)
 
 # Vercel
 .vercel

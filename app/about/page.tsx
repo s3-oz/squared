@@ -1,116 +1,51 @@
 import { Hero } from '@/components/sections/Hero'
 import { Container } from '@/components/ui/Container'
 import { Card, CardContent } from '@/components/ui/Card'
-import { Badge } from '@/components/ui/Badge'
-import { Button } from '@/components/ui/Button'
-import Link from 'next/link'
-import { getPageContent } from '@/lib/content/loader'
 
-export default async function AboutPage() {
-  const content = await getPageContent('about')
-  
+export default function AboutPage() {
   return (
     <>
       <Hero
-        headline="About Squared - Square API Experts"
-        subheadline="We're on a mission to help Australian businesses unlock the full potential of Square's powerful API ecosystem"
+        headline="A human who actually builds websites. With serious AI leverage."
         variant="centered"
       />
 
-      {/* Story Section */}
       <section className="section-padding">
         <Container size="md">
-          <div className="prose prose-lg mx-auto">
-            <h2 className="text-h2 font-bold text-primary mb-6">Our Story</h2>
-            <p className="text-body-large text-neutral-charcoal mb-6">
-              Squared was born from frustration. After years of watching businesses struggle with Square's hidden capabilities, 
-              we realized the platform's biggest strength was also its biggest weakness: incredible API power locked behind 
-              technical complexity.
+          <div className="prose prose-lg mx-auto max-w-none">
+            <p className="text-body-large text-neutral-charcoal mb-8">
+              No account manager. No offshore team. No &ldquo;AI-powered platform&rdquo; that&rsquo;s actually just a template engine. You talk to the person building your site. That person has spent {'{{OZ_FILL: years of web/platform experience}}'} shipping web platforms at the depth most agencies outsource.
             </p>
-            <p className="text-body text-neutral-charcoal mb-6">
-              We founded Squared in 2019 with a simple mission: make Square's API accessible to every Australian business. 
-              Since then, we've helped 52 companies transform their operations, saving them thousands of hours and millions 
-              in revenue.
-            </p>
-            <p className="text-body text-neutral-charcoal">
-              Today, we're Australia's only consultancy 100% focused on Square API integration. We eat, sleep, and breathe 
-              Square's documentation so our clients don't have to.
-            </p>
-          </div>
-        </Container>
-      </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-neutral-off">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-primary mb-4">Meet the Team</h2>
-            <p className="text-body-large text-neutral-charcoal max-w-2xl mx-auto">
-              A small team of Square API specialists delivering big results
+            <h2 className="text-h2 font-bold text-primary mb-4">What&rsquo;s changed</h2>
+            <p className="text-body text-neutral-charcoal mb-8">
+              AI makes one competent operator do the work of a small team — and at a small-team fraction of the cost. That&rsquo;s what lets Squared charge less without cutting corners. It&rsquo;s not magic. It&rsquo;s leverage, and you get the benefit.
             </p>
+
+            <h2 className="text-h2 font-bold text-primary mb-4">Why this matters for you</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
-                name: 'Sarah Chen',
-                role: 'Lead API Architect',
-                bio: '10+ years in payment integrations, Square certified since 2016',
+                title: 'You get craft',
+                description:
+                  'Design decisions, code quality, and opinionated choices made by a human who cares what good looks like.',
               },
               {
-                name: 'Marcus Thompson',
-                role: 'Integration Specialist',
-                bio: 'Former Square developer, expert in OAuth flows and webhooks',
+                title: 'You get speed',
+                description:
+                  'Tasks that used to take a team now take one operator with proper AI tooling.',
               },
               {
-                name: 'Emma Rodriguez',
-                role: 'Client Success Manager',
-                bio: 'Ensures every integration delivers measurable business value',
+                title: 'You get the price',
+                description: 'Half-team cost, full-team quality.',
               },
-            ].map((member) => (
-              <Card key={member.name} className="text-center">
-                <CardContent className="pt-8">
-                  <div className="w-24 h-24 bg-neutral-light rounded-full mx-auto mb-4" />
-                  <h3 className="text-h4 font-semibold mb-1">{member.name}</h3>
-                  <p className="text-sm text-secondary-blue mb-3">{member.role}</p>
-                  <p className="text-sm text-neutral-charcoal">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Values Section */}
-      <section className="section-padding">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="text-h2 font-bold text-primary mb-4">Our Values</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: 'Technical Excellence',
-                description: 'We stay current with every Square API update and best practice',
-              },
-              {
-                title: 'Business Focus',
-                description: 'Technology serves business goals, not the other way around',
-              },
-              {
-                title: 'Transparent Pricing',
-                description: 'Clear quotes, no surprises, ROI-focused engagements',
-              },
-              {
-                title: 'Local Understanding',
-                description: 'Built for Australian businesses, regulations, and markets',
-              },
-            ].map((value) => (
-              <Card key={value.title}>
+            ].map((item) => (
+              <Card key={item.title}>
                 <CardContent className="pt-6">
-                  <h3 className="text-h4 font-semibold mb-2">{value.title}</h3>
-                  <p className="text-sm text-neutral-charcoal">{value.description}</p>
+                  <h3 className="text-h4 font-semibold mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-charcoal">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -118,32 +53,28 @@ export default async function AboutPage() {
         </Container>
       </section>
 
-      {/* Certifications */}
       <section className="section-padding bg-neutral-off">
-        <Container>
-          <div className="text-center">
-            <h2 className="text-h2 font-bold text-primary mb-8">Certifications & Partnerships</h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Badge variant="secondary" className="px-6 py-3 text-base">Square Certified Partner</Badge>
-              <Badge variant="secondary" className="px-6 py-3 text-base">ISO 27001 Compliant</Badge>
-              <Badge variant="secondary" className="px-6 py-3 text-base">PCI DSS Level 1</Badge>
-            </div>
-          </div>
+        <Container size="md">
+          <h2 className="text-h2 font-bold text-primary mb-4">Why Square</h2>
+          <p className="text-body text-neutral-charcoal">
+            We kept building our own projects on Square because it&rsquo;s already good at the hard stuff — payments, inventory, customers, bookings. What Square isn&rsquo;t good at is letting you build a site that looks like your actual business. That&rsquo;s where Squared came from.
+          </p>
         </Container>
       </section>
 
-      {/* CTA */}
       <section className="section-padding">
-        <Container>
-          <div className="text-center">
-            <h2 className="text-h2 font-bold text-primary mb-4">Let's Build Something Great Together</h2>
-            <p className="text-body-large text-neutral-charcoal mb-8 max-w-2xl mx-auto">
-              Join the 52 Australian businesses already transforming their operations with custom Square integrations
-            </p>
-            <Button asChild size="lg">
-              <Link href="/consultation">Start Your Transformation</Link>
-            </Button>
-          </div>
+        <Container size="md">
+          <h2 className="text-h2 font-bold text-primary mb-4">Who it&rsquo;s for</h2>
+          <ul className="list-disc pl-6 space-y-2 text-body text-neutral-charcoal mb-8">
+            <li>
+              Cafés, retail, salons, personal trainers, small multi-location operators — anyone already on Square who&rsquo;s hit Squarespace&rsquo;s ceiling or bounced off Shopify&rsquo;s costs.
+            </li>
+            <li>Not for: enterprises, non-Square businesses, or &ldquo;just a landing page&rdquo; jobs.</li>
+          </ul>
+
+          <p className="text-body text-neutral-charcoal">
+            <strong>Based in</strong> {'{{OZ_FILL: Melbourne / Sydney / Australia}}'}
+          </p>
         </Container>
       </section>
     </>

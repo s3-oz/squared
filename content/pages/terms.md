@@ -1,0 +1,298 @@
+# Page
+
+**Path**: /terms
+
+**Generated At**: 2025-07-25T11:00:00Z
+
+## Content
+```json
+{
+  "hero": {
+    "headline": "Terms of Service",
+    "subheadline": "Clear, fair terms for our Square API integration services",
+    "last_updated": "November 15, 2024",
+    "version": "2.0",
+    "plain_english_summary": "We build Square API integrations. You pay us. We deliver great work. Everyone's happy. The details below make it official."
+  },
+  "sections": [
+    {
+      "id": "agreement",
+      "title": "The Agreement",
+      "content": {
+        "parties": "These terms form a legal agreement between Squared² Pty Ltd (ABN 12 345 678 901) ('we', 'us', 'our') and you or the entity you represent ('you', 'your', 'client').",
+        "acceptance": "By engaging our services, accessing our tools, or signing a proposal, you agree to these terms. If you're agreeing for a company, you promise you have authority to do so.",
+        "precedence": "Specific project agreements override these general terms where they conflict."
+      }
+    },
+    {
+      "id": "services",
+      "title": "Our Services",
+      "content": {
+        "what_we_do": [
+          "Square API consulting and advisory services",
+          "Custom API integration development",
+          "Integration maintenance and support",
+          "API audits and assessments",
+          "Training and documentation"
+        ],
+        "how_we_work": {
+          "discovery": "We'll understand your needs and propose a solution",
+          "agreement": "You approve the proposal and we agree on timeline/budget",
+          "development": "We build your integration with regular updates",
+          "delivery": "We deploy, test, and train your team",
+          "support": "We provide agreed post-launch support"
+        },
+        "not_included": "Unless specifically agreed, we don't provide: general IT support, Square account setup, payment processing, or non-API related services."
+      }
+    },
+    {
+      "id": "client-responsibilities",
+      "title": "Your Responsibilities",
+      "content": {
+        "intro": "Project success requires collaboration. You agree to:",
+        "responsibilities": [
+          {
+            "item": "Provide accurate requirements",
+            "detail": "Tell us what you need clearly and completely"
+          },
+          {
+            "item": "Grant necessary access",
+            "detail": "Provide Square API credentials and system access as needed"
+          },
+          {
+            "item": "Respond promptly",
+            "detail": "Answer questions and approve work within agreed timeframes"
+          },
+          {
+            "item": "Test and provide feedback",
+            "detail": "Review deliverables and report issues promptly"
+          },
+          {
+            "item": "Pay on time",
+            "detail": "Honor payment terms outlined in your agreement"
+          }
+        ],
+        "delays": "Delays in your responsibilities may impact timeline and costs."
+      }
+    },
+    {
+      "id": "intellectual-property",
+      "title": "Intellectual Property",
+      "content": {
+        "your_data": "You retain all rights to your business data, content, and pre-existing intellectual property.",
+        "custom_code": {
+          "ownership": "Custom code we create specifically for you becomes your property upon final payment.",
+          "license_to_us": "You grant us a license to showcase the project (anonymized) in our portfolio."
+        },
+        "our_tools": {
+          "ownership": "We retain rights to our pre-existing tools, frameworks, and methodologies.",
+          "license_to_you": "You receive a perpetual, non-exclusive license to use them in your integration."
+        },
+        "square_property": "Square owns their APIs and documentation. We don't claim any rights to Square's intellectual property."
+      }
+    },
+    {
+      "id": "payment",
+      "title": "Payment Terms",
+      "content": {
+        "structure": "Payment terms are specified in your project agreement. Typically:",
+        "standard_terms": [
+          "Fixed price projects: 40% upfront, 40% at milestone, 20% on completion",
+          "Hourly consulting: Monthly invoicing, NET 14 days",
+          "Support contracts: Monthly or quarterly in advance"
+        ],
+        "invoicing": "We'll send tax invoices with ABN and GST clearly shown.",
+        "late_payment": {
+          "grace_period": "7 days grace period on all invoices",
+          "interest": "1.5% monthly interest on overdue amounts",
+          "suspension": "We may suspend work for payments 30+ days overdue"
+        },
+        "disputes": "Dispute specific line items, not entire invoices. Undisputed amounts must be paid on time."
+      }
+    },
+    {
+      "id": "confidentiality",
+      "title": "Confidentiality",
+      "content": {
+        "mutual_nda": "We both agree to keep confidential information private:",
+        "our_obligations": [
+          "Keep your business information strictly confidential",
+          "Only use your data for project purposes",
+          "Limit access to team members who need it",
+          "Return or delete your data after project completion"
+        ],
+        "your_obligations": [
+          "Keep our methodologies and pricing confidential",
+          "Not recruit our team members during and 12 months after project",
+          "Respect confidentiality of our other clients"
+        ],
+        "exceptions": "Confidentiality doesn't apply to information that's public, independently developed, or legally required to be disclosed.",
+        "duration": "Confidentiality obligations survive for 5 years after project completion."
+      }
+    },
+    {
+      "id": "warranties",
+      "title": "Warranties and Disclaimers",
+      "content": {
+        "what_we_warrant": [
+          "Professional service delivery with reasonable skill and care",
+          "Integration will substantially conform to agreed specifications",
+          "We have the right to provide the services",
+          "Deliverables won't infringe third-party rights"
+        ],
+        "warranty_period": "30 days from delivery for defect correction at no charge",
+        "what_we_dont_warrant": [
+          "Integration will be error-free or uninterrupted",
+          "Square's API will remain unchanged",
+          "Specific business outcomes (unless guaranteed in writing)",
+          "Compatibility with future systems"
+        ],
+        "remedy": "For warranty breaches, we'll fix the issue or refund the affected portion."
+      }
+    },
+    {
+      "id": "liability",
+      "title": "Limitation of Liability",
+      "content": {
+        "cap": "Our total liability is limited to the amount you paid for the affected services in the 12 months before the claim.",
+        "exclusions": "Neither party is liable for indirect, consequential, or punitive damages, including lost profits, even if warned of the possibility.",
+        "exceptions": "Limitations don't apply to breaches of confidentiality, willful misconduct, or indemnification obligations.",
+        "insurance": "We maintain professional indemnity insurance of $2 million."
+      }
+    },
+    {
+      "id": "indemnification",
+      "title": "Indemnification",
+      "content": {
+        "by_us": "We'll defend you against claims that our deliverables infringe third-party intellectual property rights.",
+        "by_you": "You'll defend us against claims arising from your use of the integration, your data, or breach of these terms.",
+        "process": "The indemnified party must promptly notify, reasonably cooperate, and let the indemnifying party control defense."
+      }
+    },
+    {
+      "id": "termination",
+      "title": "Termination",
+      "content": {
+        "completion": "Agreement ends naturally when we deliver and you pay.",
+        "for_convenience": "Either party may terminate with 30 days written notice.",
+        "for_cause": "Either party may terminate immediately for material breach not cured within 14 days of notice.",
+        "effect": {
+          "payment": "You pay for work completed to termination date",
+          "delivery": "We provide work product in current state",
+          "return": "Both parties return confidential information",
+          "survival": "Confidentiality, IP, and limitation clauses survive"
+        }
+      }
+    },
+    {
+      "id": "force-majeure",
+      "title": "Force Majeure",
+      "content": {
+        "events": "Neither party is liable for delays due to events beyond reasonable control (natural disasters, war, pandemic restrictions, Square API outages).",
+        "process": "Affected party must promptly notify and mitigate impact.",
+        "extended_delay": "If force majeure exceeds 30 days, either party may terminate without penalty."
+      }
+    },
+    {
+      "id": "general",
+      "title": "General Terms",
+      "content": {
+        "governing_law": "Victorian law governs these terms. Courts of Victoria have exclusive jurisdiction.",
+        "entire_agreement": "These terms plus your project agreement are the complete agreement. Previous discussions don't count unless written here.",
+        "changes": "Amendments must be in writing and signed by both parties.",
+        "assignment": "You can't assign rights without our written consent. We may assign to a successor.",
+        "severability": "If any term is invalid, the rest remain in effect.",
+        "waiver": "Not enforcing a right doesn't waive it for the future.",
+        "notices": "Official notices must be in writing to the addresses in your project agreement.",
+        "relationship": "We're independent contractors, not partners or employees."
+      }
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "content": {
+        "approach": "We believe in solving problems through communication:",
+        "process": [
+          {
+            "step": "Discussion",
+            "description": "First, we talk directly to resolve issues",
+            "timeframe": "Within 5 business days"
+          },
+          {
+            "step": "Escalation",
+            "description": "Senior management from both sides meet",
+            "timeframe": "Within 10 business days"
+          },
+          {
+            "step": "Mediation",
+            "description": "Neutral mediator helps find resolution",
+            "timeframe": "Within 30 days"
+          },
+          {
+            "step": "Legal Action",
+            "description": "Court proceedings as last resort",
+            "venue": "Victorian courts"
+          }
+        ],
+        "costs": "Each party bears own costs until mediation (split 50/50)."
+      }
+    },
+    {
+      "id": "specific-terms",
+      "title": "Service-Specific Terms",
+      "subsections": [
+        {
+          "service": "API Playground",
+          "terms": [
+            "Free to use for testing and exploration",
+            "Don't use for production or real transactions",
+            "We're not liable for playground availability",
+            "Usage data may inform our service development"
+          ]
+        },
+        {
+          "service": "ROI Calculator",
+          "terms": [
+            "Estimates only - not guaranteed outcomes",
+            "Based on typical results from similar businesses",
+            "Your actual results will vary",
+            "Not financial advice"
+          ]
+        },
+        {
+          "service": "Support Services",
+          "terms": [
+            "Response times are during business hours",
+            "Severity levels determine response priority",
+            "Excluded: training, new features, third-party issues",
+            "Annual contracts include quarterly health checks"
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "questions": {
+      "headline": "Questions About These Terms?",
+      "text": "We believe in clear communication. If anything's unclear, ask us.",
+      "contact": "Email legal@squared.com.au or call 1300 SQUARED"
+    },
+    "plain_english": {
+      "commitment": "We've written these terms as clearly as possible while maintaining legal effectiveness. We want you to understand what you're agreeing to.",
+      "summary": "The short version: We'll do great work. You'll pay us fairly. We'll both act professionally and protect each other's interests. If problems arise, we'll work them out like adults."
+    }
+  }
+}
+```
+
+## Metadata
+```json
+{
+  "word_count": 1450,
+  "reading_time": "7 min",
+  "legal_review": "November 2024",
+  "next_review": "May 2025",
+  "jurisdiction": "Victoria, Australia"
+}
+```
+

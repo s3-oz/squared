@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils/cn'
 
 interface HeroProps {
   headline: string
-  subheadline: string
+  subheadline?: string
   primaryCTA?: {
     text: string
     href: string
@@ -46,9 +46,11 @@ export function Hero({
             <h1 className="text-hero font-bold text-primary mb-6 animate-fade-in">
               {headline}
             </h1>
-            <p className="text-body-large text-neutral-charcoal mb-8 animate-slide-up">
-              {subheadline}
-            </p>
+            {subheadline && (
+              <p className="text-body-large text-neutral-charcoal mb-8 animate-slide-up">
+                {subheadline}
+              </p>
+            )}
             
             {(primaryCTA || secondaryCTA) && (
               <div className={cn(

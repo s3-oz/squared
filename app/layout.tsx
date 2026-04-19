@@ -18,9 +18,9 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Squared - The Power of Square, Squared',
-  description: 'Expert Square API consulting, custom integrations, and technical solutions for Australian businesses. Maximize your Square investment with our specialized expertise.',
-  keywords: 'Square API, Square consulting, API integration, payment processing, Australian business, POS integration',
+  title: 'Squared — Professional websites for less than you think',
+  description: 'Custom Square-powered websites for Australian businesses already running on Square. Built by a human, with serious AI leverage.',
+  keywords: 'Square website, Square integration, Australian small business, custom website, Square Appointments',
   authors: [{ name: 'Squared' }],
   creator: 'Squared',
   publisher: 'Squared',
@@ -42,21 +42,21 @@ export const metadata: Metadata = {
     locale: 'en_AU',
     url: 'https://squared.com.au',
     siteName: 'Squared',
-    title: 'Squared - The Power of Square, Squared',
-    description: 'Expert Square API consulting and integration services for Australian businesses',
+    title: 'Squared — Professional websites for less than you think',
+    description: 'Custom Square-powered websites for Australian businesses already running on Square.',
     images: [
       {
         url: 'https://squared.com.au/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Squared - Square API Experts',
+        alt: 'Squared — Square-powered websites for AU businesses',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Squared - The Power of Square, Squared',
-    description: 'Expert Square API consulting and integration services for Australian businesses',
+    title: 'Squared — Professional websites for less than you think',
+    description: 'Custom Square-powered websites for Australian businesses already running on Square.',
     images: ['https://squared.com.au/twitter-image.png'],
   },
   alternates: {
